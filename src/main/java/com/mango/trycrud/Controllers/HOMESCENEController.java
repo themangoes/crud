@@ -1,7 +1,7 @@
-package com.mango.trycrud;
+package com.mango.trycrud.Controllers;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
+import com.mango.trycrud.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,12 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.Date;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-
-import static com.mango.trycrud.mysqlConnector.connection;
 
 public class HOMESCENEController {
     @FXML
@@ -54,27 +49,12 @@ public class HOMESCENEController {
     }
 
     private void fetchTableData() throws SQLException {
-        Statement statement = connection.createStatement();
-        ResultSet result = statement.executeQuery("select * from customerinfo;");
-        ArrayList<rowData> arrayListRows = new ArrayList<>();
-        while (result.next()){
-            arrayListRows.add(
-                    new rowData(
-                            result.getString(2),
-                            result.getInt(1),
-                            result.getInt(3),
-                            result.getInt(5),
-                            result.getDate(4)
-                            )
-            );
-        }
         CUSTOMERID.setCellValueFactory(new PropertyValueFactory<>("id"));
         CUSTOMERNAME.setCellValueFactory(new PropertyValueFactory<>("name"));
         ITEMSBOUGHT.setCellValueFactory(new PropertyValueFactory<>("itemsBought"));
         JOINEDDATE.setCellValueFactory(new PropertyValueFactory<>("joineddate"));
         PHONENUMBER.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
-        ObservableList<rowData> rows = FXCollections.observableList(arrayListRows);
-        CUSTOMERINFO.setItems(rows);
+        CUSTOMERINFO.setItems(mysqlConnector.fetchTableData());
     }
 
     @FXML

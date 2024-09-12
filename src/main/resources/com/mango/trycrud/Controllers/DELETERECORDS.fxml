@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mango.trycrud.DELETERECORDSController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mango.trycrud.Controllers.DELETERECORDSController">
    <children>
       <TableView fx:id="CUSTOMERINFO" layoutX="17.0" layoutY="50.0" prefHeight="69.0" prefWidth="571.0" scaleShape="false">
         <columns>

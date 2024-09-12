@@ -16,11 +16,12 @@ public class Main extends Application {
 
         mysqlConnector.connect();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CRUD.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Controllers\\HOMESCENE.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         stage.setTitle("Customer Database");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
 
     }

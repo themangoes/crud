@@ -1,4 +1,4 @@
-package com.mango.trycrud;
+package com.mango.trycrud.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,8 +10,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import static com.mango.trycrud.mysqlConnector.connection;
-import static com.mango.trycrud.HOMESCENEController.homeScene;
-import static com.mango.trycrud.HOMESCENEController.stage;
+import static com.mango.trycrud.Controllers.HOMESCENEController.homeScene;
+import static com.mango.trycrud.Controllers.HOMESCENEController.stage;
 
 public class INSERTRECORDSController {
     @FXML

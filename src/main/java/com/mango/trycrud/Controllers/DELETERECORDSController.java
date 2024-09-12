@@ -1,18 +1,17 @@
-package com.mango.trycrud;
+package com.mango.trycrud.Controllers;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import com.mango.trycrud.mysqlConnector;
+import com.mango.trycrud.rowData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.*;
-import java.util.ArrayList;
 
 import static com.mango.trycrud.mysqlConnector.connection;
-import static com.mango.trycrud.HOMESCENEController.homeScene;
-import static com.mango.trycrud.HOMESCENEController.stage;
+import static com.mango.trycrud.Controllers.HOMESCENEController.homeScene;
+import static com.mango.trycrud.Controllers.HOMESCENEController.stage;
 
 public class DELETERECORDSController {
     static int ID;
@@ -35,27 +34,12 @@ public class DELETERECORDSController {
 
     private void fetchTableData(int i) throws SQLException {
         if (i == 1) {
-            Statement statement = connection.createStatement();
-            ResultSet result = statement.executeQuery("select * from customerinfo where ID = " + ID + ";");
-            ArrayList<rowData> arrayListRows = new ArrayList<>();
-            while (result.next()) {
-                arrayListRows.add(
-                        new rowData(
-                                result.getString(2),
-                                result.getInt(1),
-                                result.getInt(3),
-                                result.getInt(5),
-                                result.getDate(4)
-                        )
-                );
-            }
             CUSTOMERIDCOL.setCellValueFactory(new PropertyValueFactory<>("id"));
             CUSTOMERNAME.setCellValueFactory(new PropertyValueFactory<>("name"));
             ITEMSBOUGHT.setCellValueFactory(new PropertyValueFactory<>("itemsBought"));
             JOINEDDATE.setCellValueFactory(new PropertyValueFactory<>("joineddate"));
             PHONENUMBER.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
-            ObservableList<rowData> rows = FXCollections.observableList(arrayListRows);
-            CUSTOMERINFO.setItems(rows);
+            CUSTOMERINFO.setItems(mysqlConnector.fetchTableData());
         }
         else
             CUSTOMERINFO.setItems(null);

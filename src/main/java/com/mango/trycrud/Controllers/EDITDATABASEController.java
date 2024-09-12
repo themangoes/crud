@@ -1,4 +1,4 @@
-package com.mango.trycrud;
+package com.mango.trycrud.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,7 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static com.mango.trycrud.HOMESCENEController.*;
+import static com.mango.trycrud.Controllers.HOMESCENEController.*;
 import static com.mango.trycrud.mysqlConnector.connection;
 
 public class EDITDATABASEController {

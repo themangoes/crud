@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="600.0" scaleShape="false" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mango.trycrud.HOMESCENEController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="600.0" scaleShape="false" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mango.trycrud.Controllers.HOMESCENEController">
    <children>
       <Button layoutX="280.0" layoutY="479.0" mnemonicParsing="false" onAction="#editDatabaseButton" text="EDIT" />
       <Button layoutX="477.0" layoutY="479.0" mnemonicParsing="false" onAction="#deleteRecordsButton" text="DELETE" />
