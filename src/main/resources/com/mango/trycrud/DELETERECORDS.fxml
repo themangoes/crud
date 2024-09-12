@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mango.trycrud.DELETERECORDSController">
+   <children>
+      <TableView fx:id="CUSTOMERINFO" layoutX="17.0" layoutY="50.0" prefHeight="69.0" prefWidth="571.0" scaleShape="false">
+        <columns>
+          <TableColumn fx:id="CUSTOMERIDCOL" editable="false" prefWidth="75.0" sortable="false" text="ID" />
+          <TableColumn fx:id="CUSTOMERNAME" editable="false" prefWidth="136.0" sortable="false" text="NAME" />
+            <TableColumn fx:id="ITEMSBOUGHT" editable="false" prefWidth="102.0" sortable="false" text="ITEMS BOUGHT" />
+            <TableColumn fx:id="JOINEDDATE" editable="false" prefWidth="117.0" sortable="false" text="JOINED DATE" />
+            <TableColumn fx:id="PHONENUMBER" editable="false" prefWidth="140.0" sortable="false" text="PHONE NUMBER" />
+        </columns>
+      </TableView>
+      <TextField fx:id="CUSTOMERID" layoutX="232.0" layoutY="175.0" />
+      <Label layoutX="249.0" layoutY="158.0" text="ENTER CUSTOMER ID" />
+      <Button layoutX="254.0" layoutY="294.0" mnemonicParsing="false" onAction="#deleteRecord" text="DELETE RECORD" />
+      <Button layoutX="285.0" layoutY="208.0" mnemonicParsing="false" onAction="#findCustomer" text="FIND" />
+      <Button layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnToHome" text="&lt;- BACK" />
+      <Label fx:id="status" layoutX="289.0" layoutY="361.0" />
+   </children>
+</AnchorPane>
