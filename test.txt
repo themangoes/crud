@@ -1,3 +1,5 @@
 fetchnmergetest
 pulltest
 pushtest
+testbranchpulltest
+testbranchrenamepushtest
