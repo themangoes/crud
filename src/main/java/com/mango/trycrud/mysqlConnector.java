@@ -11,7 +11,7 @@ public class mysqlConnector {
 
     public static Connection connection;
 
-    public static void connect() throws SQLException, ClassNotFoundException {
+    public static void connect() throws SQLException {
         String url = "jdbc:mysql://localhost:3306/tryCrud";
         String user = "root";
         String pass = "password";

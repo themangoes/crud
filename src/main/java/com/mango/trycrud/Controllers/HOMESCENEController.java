@@ -60,7 +60,7 @@ public class HOMESCENEController {
     @FXML
     protected void insertRecordsButton(ActionEvent e) throws IOException {
         if (insertRecordsScene == null){
-            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("INSERTRECORDS.fxml"));
+            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("..\\fxmls\\INSERTRECORDS.fxml"));
             insertRecordsScene = new Scene(loader.load());
         }
         storeHomeScene(e);
@@ -71,7 +71,7 @@ public class HOMESCENEController {
     @FXML
     protected void deleteRecordsButton(ActionEvent e) throws IOException {
         if (deleteRecordsScene == null){
-            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("DELETERECORDS.fxml"));
+            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("..\\fxmls\\DELETERECORDS.fxml"));
             deleteRecordsScene = new Scene(loader.load());
         }
         storeHomeScene(e);
@@ -82,7 +82,7 @@ public class HOMESCENEController {
     @FXML
     protected void editDatabaseButton(ActionEvent e) throws IOException {
         if (editDatabaseScene == null){
-            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("EDITDATABASE.fxml"));
+            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("..\\fxmls\\EDITDATABASE.fxml"));
             editDatabaseScene = new Scene(loader.load());
         }
         storeHomeScene(e);
